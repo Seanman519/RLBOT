@@ -74,6 +74,15 @@ RUN wget -O aerospike.tgz https://download.aerospike.com/artifacts/aerospike-ser
 	&& cd .. \
 	&& rm aerospike.tgz
 
-ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/bin/bash"]
 
-## TODO - merge Dockerfile with entrypoint
+# ## TODO - merge Dockerfile with entrypoint
+
+# Copy the entry point script into the Docker image
+COPY entrypoint.sh /entrypoint.sh
+
+# Grant execute permissions to the entry point script
+RUN chmod +x /entrypoint.sh
+
+# Set the entry point script as the default command when the container starts
+ENTRYPOINT ["/entrypoint.sh"]
