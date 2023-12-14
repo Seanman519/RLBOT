@@ -12,7 +12,7 @@ ENV MT5_PATH="/root/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe"
 ENV DISPLAY :0
 
 # Python version
-ENV PY_V="3.10.10"
+ENV PY_V="3.12.1"
 # Wine configs
 ENV WINEDLLOVERRIDES="mscoree,mshtml="
 ENV WINEDEBUG="fixme-all,err-all"
@@ -74,15 +74,13 @@ RUN wget -O aerospike.tgz https://download.aerospike.com/artifacts/aerospike-ser
 	&& cd .. \
 	&& rm aerospike.tgz
 
-# ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]
 
 # ## TODO - merge Dockerfile with entrypoint
 
-# Copy the entry point script into the Docker image
-COPY infrastructure/rlbot/entrypoint.sh entrypoint.sh
 
-# Grant execute permissions to the entry point script
-RUN chmod +x entrypoint.sh
 
-# Set the entry point script as the default command when the container starts
-ENTRYPOINT ["./infrastructure/rlbot/entrypoint.sh"]
+
+
+
+
