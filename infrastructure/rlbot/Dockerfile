@@ -12,7 +12,7 @@ ENV MT5_PATH="/root/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe"
 ENV DISPLAY :0
 
 # Python version
-ENV PY_V="3.12.1"
+ENV PY_V="3.11.5"
 # Wine configs
 ENV WINEDLLOVERRIDES="mscoree,mshtml="
 ENV WINEDEBUG="fixme-all,err-all"

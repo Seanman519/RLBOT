@@ -10,7 +10,7 @@ packages = [{include = "rlbot"}, {include = "agents"}]
 rlbot = "rlbot.cli:app"
 
 [tool.poetry.dependencies]
-python = "3.12.1"
+python = "3.11.5"
 ib-insync = "*"
 numba = "*"
 p-tqdm = "*"
