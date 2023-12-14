@@ -14,16 +14,9 @@ Welcome to RLBot - your Reinforcement Learning Trading Bot for currency pairs tr
 - **MetaTrader5 Integration**: Seamlessly connect with MetaTrader5 for market analysis and execution.
 - **Tensorflow and Ray**: Utilize cutting-edge libraries for reinforcement learning-based trading strategies.
 
-## Usage 📊
-
-### Configuration and Execution
-
-# Working on details....
-
-
 ## Showcase 🌟
 
-Check out RLBot in action! Visit our [Demo Video](link-to-demo-video) to see how the bot performs trades and makes decisions based on the configured strategies.
+<h2>* todo</h2>
 
 ## Future Plans 📅
 
