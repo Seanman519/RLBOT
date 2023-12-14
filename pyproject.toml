@@ -4,63 +4,63 @@ version = "0.0.1"
 description = ""
 authors = ["seanman519@gmail.com"]
 readme = "README.md"
-packages = [{include = "rlbot"},{include = "agents"}]
+packages = [{include = "rlbot"}, {include = "agents"}]
 
 [tool.poetry.scripts]
 rlbot = "rlbot.cli:app"
 
 [tool.poetry.dependencies]
-python = "3.10.10"
-ib-insync = "^0.9"
-numba = "^0.56"
-p-tqdm = "^1.4"
-boto3 = "^1.26"
-pyyaml = "^6.0"
-statsmodels = "^0.13"
-scikit-learn = "^1.2"
-pandas = "^1.5"
-matplotlib = "^3.7"
-ray = {extras = ["all"], version = "2.5.1"}
-polars-u64-idx = {extras = ["fsspec", "numpy", "pyarrow","pandas"], version = "^0.19"}
-pydantic = "^1.10"
-fastapi="0.99.1"
-plotly = "^5.15.0"
-notebook = "^7.0.0"
-ipywidgets = "^8.0.7"
-tensorflow = "2.13.0"
-flask = "^2.3.3"
-setproctitle = "^1.3.2"
-typer = "^0.9.0"
-redis = {extras = ["hiredis"], version = "^5.0.1"}
-xgboost = "^2.0.2"
+python = "3.12.1"
+ib-insync = "*"
+numba = "*"
+p-tqdm = "*"
+boto3 = "*"
+pyyaml = "*"
+statsmodels = "*"
+scikit-learn = "*"
+pandas = "*"
+matplotlib = "*"
+ray = {extras = ["all"], version = "*"}
+polars-u64-idx = {extras = ["fsspec", "numpy", "pyarrow","pandas"], version = "*"}
+pydantic = "*"
+fastapi = "*"
+plotly = "*"
+notebook = "*"
+ipywidgets = "*"
+tensorflow = "*"
+flask = "*"
+setproctitle = "*"
+typer = "*"
+redis = {extras = ["hiredis"], version = "*"}
+xgboost = "*"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.2"
-pre-commit = "^3.0"
-pytest-cookies = "^0.6"
-mkdocs = "^1.4"
-mkdocs-material = "^9.1"
-deptry = "^0.6"
-mypy = "^0.991"
-ipython = "^8.7"
-ipykernel = "^6.19"
-nbconvert = "^7.2"
-mkdocs-jupyter = "^0.24.6"
-tomli = "^2.0.1"
+pytest = "*"
+pre-commit = "*"
+pytest-cookies = "*"
+mkdocs = "*"
+mkdocs-material = "*"
+deptry = "*"
+mypy = "*"
+ipython = "*"
+ipykernel = "*"
+nbconvert = "*"
+mkdocs-jupyter = "*"
+tomli = "*"
 
 [tool.poetry.group.mt5]
 optional = true
 
 [tool.poetry.group.mt5.dependencies]
-MetaTrader5 = "^5.0"
-pandas = "^1.5"
-flask = {extras=["async"], version="^2.3.3" }
+MetaTrader5 = "*"
+pandas = "*"
+flask = {extras=["async"], version="*"}
 
 [tool.poetry.group.rl]
 optional = true
 
 [tool.poetry.group.rl.dependencies]
-aerospike = "^10.0"
+aerospike = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -74,16 +74,6 @@ preview = true
 [tool.isort]
 profile = "black"
 skip = [".venv"]
-
-# [tool.mypy]
-# files = ['src']
-# disallow_untyped_defs = "True"
-# disallow_any_unimported = "True"
-# no_implicit_optional = "True"
-# check_untyped_defs = "True"
-# warn_return_any = "True"
-# warn_unused_ignores = "True"
-# show_error_codes = "True"
 
 [tool.deptry]
 ignore_notebooks = "True"
