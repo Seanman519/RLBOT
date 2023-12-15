@@ -2,7 +2,7 @@
 name = "rlbot"
 version = "0.0.1"
 description = ""
-authors = ["seanman519@gmail.com"]
+authors = [Seanman519 <"seanman519@gmail.com">]
 readme = "README.md"
 packages = [{include = "rlbot"}, {include = "agents"}]
 
