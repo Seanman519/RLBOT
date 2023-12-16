@@ -20,7 +20,7 @@ statsmodels = "*"
 scikit-learn = "*"
 pandas = "*"
 matplotlib = "*"
-ray = {extras = ["all"], version = "*"}
+ray = {extras = ["all"], version = "2.8.1"}
 polars-u64-idx = {extras = ["fsspec", "numpy", "pyarrow","pandas"], version = "*"}
 pydantic = "*"
 fastapi = "*"
