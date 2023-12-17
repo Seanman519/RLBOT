@@ -69,11 +69,3 @@ if ! test -f "/workspaces/rlbot/data/platforms/mt5/0/MetaTrader 5/terminal64.exe
 fi
 # && rm mt5setup.exe \
 echo "MT5 installed successfully"
-docker run \
-    --net host \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v $(pwd):/rlbot \
-    -e DISPLAY \
-    -it \
-    --name rlbot \
-    rlbot:latest

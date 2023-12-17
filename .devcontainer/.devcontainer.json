@@ -1,0 +1,45 @@
+{
+	"name": "rlbot",
+
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	// "context": "..",
+
+	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+	// "dockerFile": "../infrastructure/releat/Dockerfile",
+    "image": "seanman519:rlbot",
+
+    // Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "root",
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+    // shm-size is necessary for ray
+    "runArgs": [
+        "--name=releat-dc",
+        "--net=host",
+        "--shm-size=8gb",
+        "-e DISPLAY=$DISPLAY"
+	],
+
+    // Uncomment the next line to run commands after the container is created - for example installing curl.
+	"postStartCommand": ["/bin/bash", "./entrypoint.sh"],
+
+    "customizations": {
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "redhat.vscode-yaml",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "VisualStudioExptTeam.intellicode-api-usage-examples",
+                "GitHub.vscode-pull-request-github",
+                "esbenp.prettier-vscode",
+                "mutantdino.resourcemonitor",
+                "hbenl.vscode-test-explorer"
+                        ]
+                    }
+                }
+
+}
