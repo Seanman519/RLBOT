@@ -2,17 +2,17 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:focal
 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file infrastructure/rlbot/Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . Dockerfile --tag rlbot:$(date +%s)
