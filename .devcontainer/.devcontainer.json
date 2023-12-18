@@ -6,7 +6,7 @@
     "build": { "dockerfile": "Dockerfile" },
 
     "runArgs": [
-        "--name=releat-dc",
+        "--name=rlbot",
         "--net=host",
         "--shm-size=8gb",
         "-e DISPLAY=$DISPLAY"
