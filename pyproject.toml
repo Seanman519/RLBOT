@@ -2,7 +2,7 @@
 name = "rlbot"
 version = "0.0.1"
 description = ""
-authors = ["Seanman519 <seanman519@gmail.com">]
+authors = ["Seanman519 <seanman519@gmail.com>"]
 readme = "README.md"
 packages = [{include = "rlbot"}, {include = "agents"}]
 
@@ -20,7 +20,7 @@ statsmodels = "*"
 scikit-learn = "*"
 pandas = "*"
 matplotlib = "*"
-ray = {extras = ["all"], version = "2.8.1"}
+ray = {extras = ["all"], version = "2.5.1"}
 polars-u64-idx = {extras = ["fsspec", "numpy", "pyarrow","pandas"], version = "*"}
 pydantic = "*"
 fastapi = "*"
