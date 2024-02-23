@@ -32,7 +32,7 @@ Welcome to RLBot - your Reinforcement Learning Trading Bot for currency pairs tr
 
 For questions, suggestions, or issues, please [open an issue](https://github.com/Seanman519/rlbot/issues)
 
-Don't forget to ⭐️ star the project if you find these features intriguing!
+Don't forget to follow me & ⭐️ star the project if you find these features intriguing!
 
 ## Reach out to me via email - seanman519@gmail.com
 
@@ -42,4 +42,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for exploring RLBot! Your support and engagement drive our commitment to revolutionize algorithmic trading. Let's trade smarter together! 📈✨
+Thank you for exploring RLBot! Your support and engagement drive my commitment to revolutionize algorithmic trading. Let's trade smarter together! 📈✨
