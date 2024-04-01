@@ -1,11 +1,3 @@
-"""Transformers.
-
-Transforms features by:
-- scaling
-- clipping
-- normalization
-
-"""
 from __future__ import annotations
 
 import _pickle as cPickle
@@ -21,9 +13,9 @@ from numba import njit
 from sklearn.preprocessing import PowerTransformer
 from tqdm import tqdm
 
-from rlbot.data.utils import get_feature_dir
-from rlbot.data.utils import split_timeframe
-from rlbot.utils.logging import get_logger
+from releat.data.utils import get_feature_dir
+from releat.data.utils import split_timeframe
+from releat.utils.logging import get_logger
 
 logger = get_logger(__name__)
 
@@ -452,7 +444,7 @@ def get_transform_params_for_one_feature_group(config, feat_group_ind):
                             lambda x: x.take_every(take_every_num).head(obs_len),
                         ),
                     )
-                    .filter(pl.col("group_ind" >= 0))
+                    .filter(pl.col("group_ind") >= 0)
                     .with_columns(pl.lit(df_raw["time_msc"]).alias("time_msc"))
                 )
                 df = df.head(len(df) - int(obs_len * num * mult))
