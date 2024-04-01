@@ -1,8 +1,3 @@
-"""Train rl agent.
-
-Process for training agent
-
-"""
 from __future__ import annotations
 
 import os
@@ -14,7 +9,7 @@ import ray
 from ray.rllib.algorithms.impala import ImpalaConfig as RLAlgorithmConfig
 from ray.rllib.models import ModelCatalog
 
-from rlbot.gym_env.gym_env import FxEnv
+from releat.gym_env.gym_env import FxEnv
 
 
 def train_rl_agent(config, AgentModel):
@@ -33,7 +28,7 @@ def train_rl_agent(config, AgentModel):
     ray.init(address="auto")
 
     logdir = config.paths.algo_dir
-    ckpt_offset = max([int(x.split("/")[-1].strip()) for x in glob(f"{logdir}/0*")])
+    ckpt_offset = max([int(x.split("/")[-1].strip()) for x in glob(f"{logdir}/0*")], default=0)
     _ = os.makedirs(logdir, exist_ok=True)
 
     ModelCatalog.register_custom_model("AgentModel", AgentModel)
