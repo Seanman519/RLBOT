@@ -1,0 +1,17 @@
+{
+	"name": "rlbot",
+
+
+	// "dockerFile": "Dockerfile",
+    "build": { "dockerfile": "Dockerfile" },
+
+    "runArgs": [
+        "--name=rlbot",
+        "--net=host",
+        "--shm-size=8gb",
+        "-e DISPLAY=$DISPLAY"
+	],
+
+    
+	"postStartCommand": ["/bin/bash", "./entrypoint.sh"]
+}
