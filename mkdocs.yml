@@ -1,0 +1,131 @@
+site_name: rlbot
+site_description: Reinforcement Learning for Algorithmic Trading
+site_author: rlbot
+copyright: |
+  &copy; rlbot@gmail.com
+docs_dir: docs/
+repo_url: https://github.com/rlbot/rlbot
+repo_name: rlbot/rlbot
+
+
+plugins:
+  - search:
+      lang: en
+  - tags:
+      tags_file: tags.md
+  - mkdocs-jupyter
+
+extra_css:
+  - css/style.css
+
+theme:
+  name: material
+
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+
+  logo: images/logo-1.png
+
+  favicon: images/logo-1.png
+
+
+
+  features:
+
+
+  # Navigation:
+  - navigation.expand      # Expand all collapsable sections.
+  - navigation.instant     # Instant loading pages.
+  - navigation.indexes     # Attach pages directly to Sections. Incompatible with "toc.integrate"
+  - navigation.sections    # Render top sections as groups.
+  - navigation.tabs         # Render top sections as tabs at the top.
+  - navigation.tabs.sticky # Tabs won't disappear when scrolling down. Requires "navigation.tabs".
+  - navigation.top         # Adds a "Back to top" that is shown when scrolling up.
+
+  # Search
+  - search.highlight # Search will highlight the searched word(s) on the page.*
+
+  # Table of Contents
+  - toc.follow
+
+  icon:
+    repo: 'fontawesome/brands/github'
+    logo: 'images/logo-1.png'
+
+
+
+  #admonition:
+  #    note: 'octicons/tag-16'
+  #    abstract: 'octicons/checklist-16'
+  #    info: 'octicons/info-16'
+  #    tip: 'octicons/squirrel-16'
+  #    success: 'octicons/check-16'
+  #    question: 'octicons/question-16'
+  #    warning: 'octicons/alert-16'
+  #    failure: 'octicons/x-circle-16'
+  #    danger: 'octicons/zap-16'
+  #    bug: 'octicons/bug-16'
+  #    example: 'octicons/beaker-16'
+  #    quote: 'octicons/quote-16'
+
+
+markdown_extensions:
+  - markdown.extensions.admonition:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.toc:
+      permalink: true
+  # - pymdownx.arithmex:
+  # - pymdownx.b64:
+  # - pymdownx.betterem:
+  # - pymdownx.caret:
+  # - pymdownx.critic:
+  # - pymdownx.details:
+  # - pymdownx.emoji:
+  # - pymdownx.escapeall:
+  # - pymdownx.extra:
+  # - pymdownx.extrarawhtml:
+  # - pymdownx.highlight:
+  # - pymdownx.inlinehilite:
+  # - pymdownx.keys:
+  # - pymdownx.magiclink:
+  # - pymdownx.mark:
+  # - pymdownx.pathconverter:
+  # - pymdownx.progressbar:
+  # - pymdownx.smartsymbols:
+  # - pymdownx.snippets:
+  # - pymdownx.striphtml:
+  # - pymdownx.superfences:
+  # - pymdownx.tabbed:
+  # - pymdownx.tasklist:
+  # - pymdownx.tilde:
+
+nav:
+  - Welcome: ./index.md
+  - Getting Started:
+      - Installation: ./getting_started/installation.md
+      - Basic Usage: ./getting_started/basic_usage.md
+      - Architecture: ./development_notes/architecture/overview.md
+  - Examples:
+      - Extracting MT5 data: ./examples/mt5_api_data_extract.ipynb
+      - Building gradient feature: ./examples/make_gradient_feature.ipynb
+      - Evaluate simple RL agent (t00001): ./examples/eval_rl_agent_simple.ipynb
+  - Development Notes:
+    - Containerisation: ./development_notes/rlbot_dockerfile.md
+  - Troubleshooting: ./troubleshooting/troubleshooting.md
