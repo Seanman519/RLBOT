@@ -6,7 +6,7 @@
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 	// "dockerFile": "../infrastructure/rlbot/Dockerfile",
-    "image": "rlbot/rlbot:1.0",
+    "image": "rlbot:latest",
 
     // Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "root",
