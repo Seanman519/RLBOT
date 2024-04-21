@@ -51,7 +51,7 @@ agent_config = {
         "rec_reward_t": 1.0,
         "win_rate_t": 0.5,  # Adjusted win rate threshold
         "pos_loss_t": -10.0,
-        "drawdown_t": 25.0,  # Adjusted drawdown threshold
+        "drawdown_t": 30.0,
         "end_cum_r_t": -20.0,
         "min_cum_r_t": -30.0,
         "osample_p": 0.99,
@@ -74,7 +74,7 @@ agent_config = {
     "mt5": mt5_creds["metaquotes"]["demo"],
     "trader": {
         "trade_mode": "live",
-        "deviation": 3,  # Further reduced deviation for tighter risk management
+        "deviation": 5,  # Adjusted deviation for risk management
         "lot": 0.01,  # Adjusted lot size for risk management
         "portfolio": [
             {"symbol": "EURUSD", "max_long": 2, "max_short": 2},
@@ -132,6 +132,7 @@ agent_config = {
         "recreate_failed_workers": True,
     },
 }
+
 av = agent_config["agent_version"]
 cwd = os.path.abspath(__file__)
 assert av in cwd, "agent version: {av} does not match directory {cwd}"
